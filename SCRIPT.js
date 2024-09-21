@@ -1,3 +1,4 @@
+
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
@@ -21,6 +22,8 @@ let gameRunning = false;
 const startButton = document.getElementById("startButton");
 const resetButton = document.getElementById("resetButton");
 const scoreDisplay = document.getElementById("scoreDisplay");
+submitScoreButton.addEventListener("click", submitScore);
+
 
 // Event Listeners for player movement
 document.addEventListener("keydown", movePlayer);

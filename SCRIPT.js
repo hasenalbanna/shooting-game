@@ -156,12 +156,35 @@ function updateScoreAndLives() {
     scoreDisplay.textContent = `Score: ${score} | Lives Left: ${lives}`;
 }
 
-// Game Over logic
+// When the game ends
 function gameOver() {
     gameRunning = false;
-    alert("Game Over! Your score: " + score);
-    resetButton.style.display = "block"; // Show reset button
+    stopEnemySpawn();
+    gameOverSection.style.display = "block"; // Show input for player name
 }
+
+// Submit score function
+function submitScore() {
+    playerName = playerNameInput.value.trim();
+    if (playerName !== "") {
+        players.push({ name: playerName, score: score });
+        displayScoreboard();
+        resetGame();
+    } else {
+        alert("Please enter a name!");
+    }
+}
+
+// Display scoreboard
+function displayScoreboard() {
+    scoreboard.innerHTML = "<h3>Player Scores:</h3>";
+    players.forEach(player => {
+        const playerDiv = document.createElement("div");
+        playerDiv.textContent = `${player.name}: ${player.score}`;
+        scoreboard.appendChild(playerDiv);
+    });
+}
+
 
 // Game loop
 function update() {

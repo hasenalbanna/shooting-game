@@ -1,0 +1,35 @@
+#gameOverSection {
+    text-align: center;
+    margin: 20px;
+}
+
+#playerNameInput {
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+#submitScoreButton {
+    padding: 10px;
+    font-size: 16px;
+    background-color: blue;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+}
+
+#scoreboard {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#scoreboard div {
+    font-size: 18px;
+    margin: 5px 0;
+}
+body{
+    border-radius: 100PX;
+border-bottom-left-radius: 10PX;
+    background-color: rgb(78, 78, 78);
+    COLOR:rgb(255, 0, 0);
+}

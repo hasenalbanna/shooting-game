@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shooting Game</title>
+    <link rel="stylesheet" href="STYLES.CSS">
+</head>
+<body >
+    <h1>Shooting Game</h1>
+    <p id="scoreDisplay">Score: 0 | Lives Left: 5</p>
+    <canvas id="gameCanvas" width="600" height="400"></canvas>
+    
+    <!-- Game Over Input Section -->
+    <div id="gameOverSection" style="display:none;">
+        <p>Game Over! Enter your name:</p>
+        <input type="text" id="playerNameInput" placeholder="Your name">
+        <button id="submitScoreButton">Submit Score</button>
+    </div>
+    
+    <button id="startButton">Start Game</button>
+    <button id="resetButton" style="display: none;">Reset Game</button>
+
+    <!-- Scoreboard Section -->
+    <h2>Scoreboard</h2>
+    <div id="scoreboard"></div>
+
+    <script src="SCRIPT.js"></script>
+</body>
+</html>
